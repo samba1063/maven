@@ -17,7 +17,8 @@ try {
    stage('Deploy') {
         sh "/bin/cp -f $WORKSPACE/Build-${env.BUILD_NUMBER}/samba_${env.BRANCH_NAME}${env.BUILD_NUMBER}.war /opt/apache-tomcat-8.5.33/webapps/samba.war"
         sh"/bin/rm -rf /opt/apache-tomcat-8.5.33/webapps/ROOT/*"
-        sh"/bin/mv -f /opt/apache-tomcat-8.5.33/webapps/samba/* /opt/apache-tomcat-8.5.33/webapps/ROOT/*"
+        sh"
+        sh"/bin/mv -f /opt/apache-tomcat-8.5.33/webapps/samba/* /opt/apache-tomcat-8.5.33/webapps/ROOT/"
    }
   
    delivery.artifactory()
