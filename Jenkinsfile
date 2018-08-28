@@ -1,5 +1,5 @@
 
-node('Node1') {
+node('modjk') {
 // Delete the workspace
 //deleteDir()
 stage('Retrieve source code') {
